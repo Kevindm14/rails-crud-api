@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    json_response(@article)
+    render json: @article, include: 'comments'
   end
 
   private
